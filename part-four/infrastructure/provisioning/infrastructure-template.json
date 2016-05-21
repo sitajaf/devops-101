@@ -215,21 +215,6 @@
       }
     },
 
-    "InstanceProfileForCISlave": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Path": "/",
-        "Roles": [ { "Ref": "RoleForCISlave" } ]
-      }
-    },
-
-    "S3Bucket" : {
-      "Type" : "AWS::S3::Bucket",
-      "Properties" : {
-        "BucketName" : "devops-part-four"
-      }
-    },
-
     "RoleForCISlave" : {
       "Type" : "AWS::IAM::Role",
       "Properties" : {
@@ -242,6 +227,21 @@
           } ]
         },
         "Path" : "/"
+      }
+    },
+
+    "InstanceProfileForCISlave": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Path": "/",
+        "Roles": [ { "Ref": "RoleForCISlave" } ]
+      }
+    },
+
+    "S3Bucket" : {
+      "Type" : "AWS::S3::Bucket",
+      "Properties" : {
+        "BucketName" : "devops-part-four-bucket"
       }
     },
 
